@@ -11,7 +11,7 @@ import 'package:watermaniac/widgets/container_wrapper/container_wrapper.dart';
 import 'package:watermaniac/widgets/shadow/shadow_text.dart';
 
 class HistoryLists extends StatefulWidget {
-  final TabController tabController;
+  final TabController? tabController;
 
   HistoryLists({this.tabController});
 

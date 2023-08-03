@@ -22,23 +22,12 @@ class WatermaniacApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.light,
         primaryColor: const Color(0xFF4C9BFB),
-        accentColor: const Color(0xFFF66BBE),
+        // accentColor: const Color(0xFFF66BBE),
         // f5bad3 (pinkish), c7d0df (grayish), fcfbfe (whiteish)
       ),
       home: StoreProvider(
         store: store,
-        child: StoreBuilder<AppState>(
-          onInit: (store) {
-            store.dispatch(LoadDrinkHistoryAction());
-            store.dispatch(LoadAppSettingsAction());
-          },
-          builder: (context, store) {
-            return Material(
-              type: MaterialType.transparency,
-              child: HomePage(),
-            );
-          },
-        ),
+        child: HomePage(),
       ),
     );
   }
